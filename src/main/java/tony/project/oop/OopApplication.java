@@ -18,6 +18,16 @@ public class OopApplication {
 	}
 
 	@Bean
+	public WebMvcConfigurer corsConfigurer() {
+		return new WebMvcConfigurer() {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/**").allowedOrigins("*").allowCredentials(false).allowedMethods("*").allowedHeaders("*").allowedOriginPatterns("*");
+			}
+		};
+	}
+
+	@Bean
 	public Jackson2ObjectMapperBuilderCustomizer customizer() {
 		return builder -> builder.serializerByType(ObjectId.class, new ToStringSerializer());
 	}

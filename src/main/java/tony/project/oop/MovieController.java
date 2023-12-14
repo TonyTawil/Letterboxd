@@ -10,7 +10,6 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/movies")
-@CrossOrigin("https://letterboxd-frontend-1.vercel.app/")
 public class MovieController {
     @Autowired
     private MovieService movieService;
