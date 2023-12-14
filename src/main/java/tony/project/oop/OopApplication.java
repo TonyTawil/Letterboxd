@@ -22,11 +22,7 @@ public class OopApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**")
-						.allowedOriginPatterns("*")
-						.allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS")
-						.allowedHeaders("*")
-						.allowCredentials(true);
+				registry.addMapping("/**").allowedOrigins("http://localhost:3000").allowCredentials(false).allowedMethods("*").allowedHeaders("*").allowedOriginPatterns("*");
 			}
 		};
 	}
