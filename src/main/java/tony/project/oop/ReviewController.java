@@ -10,7 +10,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/reviews")
-@CrossOrigin("http://localhost:3000")
+@CrossOrigin("https://letterboxd-frontend-1.vercel.app/")
 public class ReviewController {
     @Autowired
     private ReviewService reviewService;
