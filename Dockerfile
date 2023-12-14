@@ -1,5 +1,5 @@
-FROM maven:3.2.0-openjdk-21 AS build
+FROM eclipse-temurin:21-jdk-alpine
 VOLUME /tmp
-COPY target/*.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+COPY target/*.jar oop.jar
+ENTRYPOINT ["java","-jar","/oop.jar"]
 EXPOSE 8080
